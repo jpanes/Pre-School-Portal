@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<p id="notice"><%= notice %></p>
+
+<head>
+<link rel="stylesheet" type="text/css" href="show.css">
+</head>
+
+<body>
+<div id = "show" class ="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @parent.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @parent.address %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @parent.email %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @parent.phone_number %>
+</p>
+
+<p>
+  <strong>Child:</strong>
+  <%= @parent.child %>
+</p>
+
+<%= link_to 'Edit', edit_parent_path(@parent) %> |
+<%= link_to 'Back', parents_path %>
+</div>
+</body>
+</html>
