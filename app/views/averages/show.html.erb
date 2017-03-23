@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @average.name %>
+</p>
+
+<p>
+  <strong>Filipino:</strong>
+  <%= @average.filipino %>
+</p>
+
+<p>
+  <strong>English:</strong>
+  <%= @average.english %>
+</p>
+
+<p>
+  <strong>Science:</strong>
+  <%= @average.science %>
+</p>
+
+<p>
+  <strong>Math:</strong>
+  <%= @average.math %>
+</p>
+
+<p>
+  <strong>Msep:</strong>
+  <%= @average.msep %>
+</p>
+
+<p>
+  <strong>Grading:</strong>
+  <%= @average.grading %>
+</p>
+<%= link_to 'Edit', edit_average_path(@average) %> 
+<%= link_to 'Back', averages_path %>
+
