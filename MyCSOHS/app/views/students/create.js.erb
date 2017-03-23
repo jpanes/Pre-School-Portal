@@ -1,0 +1,14 @@
+$("#mynewstudent").modal('hide');
+$(".student_name").val('');
+$(".student_gender").val('');
+$(".student_address").val('');
+$(".student_grade").val('');
+$(".student_birthday").val('');
+$(".student_remarks").val('');
+$(".student_dream").val('');
+$(".student_motto").val('');
+$(".student_age").val('');
+
+$("#container_students").prepend('<%= j render @student%>');
+$("#student_<%= @student.id %>").hide().fadeIn(1000);
+

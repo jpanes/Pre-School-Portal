@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+  <title>CSOHSPortal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">CSOHSPortal</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><%= link_to 'Home', root_path %>
+      </li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <form class="navbar-form navbar-left">
+      <div class="form-group">
+        <%= form_tag(students_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Students" %>
+<%= submit_tag "Search" %>
+<% end %>
+<% if @students.present? %>
+  <%= render 'students' %>
+<% else %>
+  <p>There are no student containing the name(s) <%= params[:search] %>.</p>
+<% end %>
+      </div>
+    </form>
+  </div>
+</nav>
+
+
+
+<body>
+
+<div class="row">
+    <div class="col-sm-2" style="background-color:lavender;"><%= image_tag("csohs1.jpg", size: "220x210", alt: "Edit Entry")%></div>
+    <div class="col-sm-10" style="background-color:lavenderblush;">
+    <%= yield %>
+
+</div>
+  </div>
+
+
+</body>
+</html>
