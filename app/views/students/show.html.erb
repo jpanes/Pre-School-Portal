@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Student:</strong>
+  <%= @student.student_id %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @student.name %>
 </p>
@@ -11,25 +16,11 @@
 </p>
 
 <p>
-<<<<<<< HEAD
-=======
-  <strong>Address:</strong>
-  <%= @student.address %>
-</p>
-
-<p>
-  <strong>Grade:</strong>
-  <%= @student.grade %>
-</p>
-
-<p>
->>>>>>> c2f48197c7a37cb92e9afb73456087eeb4f96cc2
   <strong>Birthday:</strong>
   <%= @student.birthday %>
 </p>
 
 <p>
-<<<<<<< HEAD
   <strong>Age:</strong>
   <%= @student.age %>
 </p>
@@ -42,30 +33,6 @@
 <p>
   <strong>Level:</strong>
   <%= @student.level %>
-</p>
-
-<p>
-  <strong>Picture:</strong>
-<%= image_tag @student.picture%>
-=======
-  <strong>Remarks:</strong>
-  <%= @student.remarks %>
-</p>
-
-<p>
-  <strong>Dream:</strong>
-  <%= @student.dream %>
-</p>
-
-<p>
-  <strong>Motto:</strong>
-  <%= @student.motto %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @student.age %>
->>>>>>> c2f48197c7a37cb92e9afb73456087eeb4f96cc2
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |

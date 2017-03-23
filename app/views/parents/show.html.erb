@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
 <p id="notice"><%= notice %></p>
 
-<head>
-<link rel="stylesheet" type="text/css" href="show.css">
-</head>
-
-<body>
-<div id = "show" class ="container">
-<p id="notice"><%= notice %></p>
+<p>
+  <strong>Parent:</strong>
+  <%= @parent.parent_id %>
+</p>
 
 <p>
   <strong>Name:</strong>
@@ -16,8 +11,8 @@
 </p>
 
 <p>
-  <strong>Address:</strong>
-  <%= @parent.address %>
+  <strong>Contact number:</strong>
+  <%= @parent.contact_number %>
 </p>
 
 <p>
@@ -26,8 +21,8 @@
 </p>
 
 <p>
-  <strong>Phone number:</strong>
-  <%= @parent.phone_number %>
+  <strong>Address:</strong>
+  <%= @parent.address %>
 </p>
 
 <p>
@@ -35,8 +30,7 @@
   <%= @parent.child %>
 </p>
 
+<%= render :partial=>"new_parent" %>
+
 <%= link_to 'Edit', edit_parent_path(@parent) %> |
 <%= link_to 'Back', parents_path %>
-</div>
-</body>
-</html>
