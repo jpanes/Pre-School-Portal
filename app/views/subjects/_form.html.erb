@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :subject_title %><br>
-    <%= f.text_field :subject_title %>
+    <%= f.label :subject_name %><br>
+    <%= f.text_field :subject_name %>
   </div>
   <div class="field">
     <%= f.label :first_grading %><br>
@@ -21,11 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :second_grading %><br>
-    <%= f.text_field :second_grading %>
-  </div>
-  <div class="field">
-    <%= f.label :integer %><br>
-    <%= f.text_field :integer %>
+    <%= f.number_field :second_grading %>
   </div>
   <div class="field">
     <%= f.label :third_grading %><br>
@@ -36,16 +32,12 @@
     <%= f.number_field :fourth_grading %>
   </div>
   <div class="field">
-    <%= f.label :final_grade %><br>
-    <%= f.number_field :final_grade %>
+    <%= f.label :Final_grade %><br>
+    <%= f.number_field :Final_grade %>
   </div>
   <div class="field">
     <%= f.label :student_id %><br>
     <%= f.number_field :student_id %>
-  </div>
-  <div class="field">
-    <%= f.label :remarks %><br>
-    <%= f.text_field :remarks %>
   </div>
   <div class="actions">
     <%= f.submit %>

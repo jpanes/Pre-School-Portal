@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Subject title:</strong>
-  <%= @subject.subject_title %>
+  <strong>Subject name:</strong>
+  <%= @subject.subject_name %>
 </p>
 
 <p>
@@ -13,11 +13,6 @@
 <p>
   <strong>Second grading:</strong>
   <%= @subject.second_grading %>
-</p>
-
-<p>
-  <strong>Integer:</strong>
-  <%= @subject.integer %>
 </p>
 
 <p>
@@ -32,17 +27,12 @@
 
 <p>
   <strong>Final grade:</strong>
-  <%= @subject.final_grade %>
+  <%= @subject.Final_grade %>
 </p>
 
 <p>
   <strong>Student:</strong>
   <%= @subject.student_id %>
-</p>
-
-<p>
-  <strong>Remarks:</strong>
-  <%= @subject.remarks %>
 </p>
 
 <%= link_to 'Edit', edit_subject_path(@subject) %> |

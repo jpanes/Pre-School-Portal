@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  resources :students
+  resources :subjects
+  mount RailsAdmin::Engine => '/admin/708419', as: 'rails_admin'
+  resources :subjects
+  root 'home#index'
+resources :students
+  devise_for :users, controllers: { registrations: "registrations"}
+  get 'users/:id/students' => 'students#index', :as => :user_students_path
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

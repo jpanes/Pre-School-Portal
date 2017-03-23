@@ -18,7 +18,7 @@ class SubjectsControllerTest < ActionController::TestCase
 
   test "should create subject" do
     assert_difference('Subject.count') do
-      post :create, subject: { final_grade: @subject.final_grade, first_grading: @subject.first_grading, fourth_grading: @subject.fourth_grading, integer: @subject.integer, remarks: @subject.remarks, second_grading: @subject.second_grading, student_id: @subject.student_id, subject_title: @subject.subject_title, third_grading: @subject.third_grading }
+      post :create, subject: { Final_grade: @subject.Final_grade, first_grading: @subject.first_grading, fourth_grading: @subject.fourth_grading, second_grading: @subject.second_grading, student_id: @subject.student_id, subject_name: @subject.subject_name, third_grading: @subject.third_grading }
     end
 
     assert_redirected_to subject_path(assigns(:subject))
@@ -35,7 +35,7 @@ class SubjectsControllerTest < ActionController::TestCase
   end
 
   test "should update subject" do
-    patch :update, id: @subject, subject: { final_grade: @subject.final_grade, first_grading: @subject.first_grading, fourth_grading: @subject.fourth_grading, integer: @subject.integer, remarks: @subject.remarks, second_grading: @subject.second_grading, student_id: @subject.student_id, subject_title: @subject.subject_title, third_grading: @subject.third_grading }
+    patch :update, id: @subject, subject: { Final_grade: @subject.Final_grade, first_grading: @subject.first_grading, fourth_grading: @subject.fourth_grading, second_grading: @subject.second_grading, student_id: @subject.student_id, subject_name: @subject.subject_name, third_grading: @subject.third_grading }
     assert_redirected_to subject_path(assigns(:subject))
   end
 

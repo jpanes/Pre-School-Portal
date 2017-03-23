@@ -1,11 +1,20 @@
 class StudentsController < ApplicationController
+  skip_before_filter :verify_authenticity_token  
+  before_action :authenticate_user!
   before_action :set_student, only: [:show, :edit, :update, :destroy]
 
   # GET /students
   # GET /students.json
   def index
+
     @students = Student.all
     @student = Student.new
+
+    if params[:search]
+      @students = Student.search(params[:search])
+    else
+      @students = Student.all
+    end
   end
 
   # GET /students/1
@@ -31,11 +40,11 @@ class StudentsController < ApplicationController
       if @student.save
         format.html { redirect_to @student, notice: 'Student was successfully created.' }
         format.json { render :show, status: :created, location: @student }
-        format.js
+      
       else
         format.html { render :new }
         format.json { render json: @student.errors, status: :unprocessable_entity }
-        format.js
+      
       end
     end
   end
@@ -47,11 +56,11 @@ class StudentsController < ApplicationController
       if @student.update(student_params)
         format.html { redirect_to @student, notice: 'Student was successfully updated.' }
         format.json { render :show, status: :ok, location: @student }
-        format.js
+
       else
         format.html { render :edit }
         format.json { render json: @student.errors, status: :unprocessable_entity }
-        format.js
+   
       end
     end
   end
@@ -63,7 +72,7 @@ class StudentsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to students_url, notice: 'Student was successfully destroyed.' }
       format.json { head :no_content }
-      format.js
+   
     end
   end
 
@@ -75,6 +84,6 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:name, :gender, :address, :grade, :birthday, :remarks, :dream, :motto, :age)
+      params.require(:student).permit(:name, :gender, :birthday, :age, :address, :level, :picture)
     end
 end

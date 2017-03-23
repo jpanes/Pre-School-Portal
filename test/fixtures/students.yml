@@ -3,21 +3,17 @@
 one:
   name: MyString
   gender: MyString
-  address: MyString
-  grade: 1
   birthday: 2017-03-21
-  remarks: MyString
-  dream: MyString
-  motto: MyString
   age: 1
+  address: MyString
+  level: 1
+  picture: MyString
 
 two:
   name: MyString
   gender: MyString
-  address: MyString
-  grade: 1
   birthday: 2017-03-21
-  remarks: MyString
-  dream: MyString
-  motto: MyString
   age: 1
+  address: MyString
+  level: 1
+  picture: MyString

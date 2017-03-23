@@ -8,8 +8,6 @@ class CreateStudents < ActiveRecord::Migration
       t.string :address
       t.integer :level
       t.string :picture
-      t.integer :user_id
-
       t.timestamps null: false
     end
   end

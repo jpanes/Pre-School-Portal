@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module MyCSOHS
+module FinalApp
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -21,6 +21,24 @@ module MyCSOHS
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
+
+ActionMailer::Base.smtp_settings = {
+
+   :address     => 'smtp.gmail.com',
+   :domain     => 'mail.google.com',
+   :port     => 587,
+   :username     => "csohsapp@gmail.com",
+   :password     => "weakpass",
+   :authentication     => 'login',
+   :enable_starttls_auto      => true
+
+
+}
+
+
+
+
+
     config.active_record.raise_in_transactional_callbacks = true
   end
 end

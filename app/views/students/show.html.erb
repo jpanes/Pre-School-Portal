@@ -1,6 +1,11 @@
+<div class= "container-fluid">
+<div class="row">
 <p id="notice"><%= notice %></p>
 
+
+<div class="col-sm-3" style="background-color:lavender;">
 <p>
+<%= image_tag @student.picture%><br>
   <strong>Name:</strong>
   <%= @student.name %>
 </p>
@@ -11,33 +16,8 @@
 </p>
 
 <p>
-  <strong>Address:</strong>
-  <%= @student.address %>
-</p>
-
-<p>
-  <strong>Grade:</strong>
-  <%= @student.grade %>
-</p>
-
-<p>
   <strong>Birthday:</strong>
   <%= @student.birthday %>
-</p>
-
-<p>
-  <strong>Remarks:</strong>
-  <%= @student.remarks %>
-</p>
-
-<p>
-  <strong>Dream:</strong>
-  <%= @student.dream %>
-</p>
-
-<p>
-  <strong>Motto:</strong>
-  <%= @student.motto %>
 </p>
 
 <p>
@@ -45,5 +25,28 @@
   <%= @student.age %>
 </p>
 
+<p>
+  <strong>Address:</strong>
+  <%= @student.address %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @student.level %>
+</p>
+
+
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>
+<% render :partial => "new_subject", :locals=>{:subject=>Subject.new(:student_id=>@student.id)} %>
+</div>
+
+
+
+<div class="col-sm-9" style="background-color:white;">
+<%= render :partial => "subject_list", :locals=>{:subject=>@student.subjects }%>
+</div>
+
+
+</div>
+</div>
