@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject name:</strong>
+  <%= @subject.subject_name %>
+</p>
+
+<p>
+  <strong>First grading:</strong>
+  <%= @subject.first_grading %>
+</p>
+
+<p>
+  <strong>Second grading:</strong>
+  <%= @subject.second_grading %>
+</p>
+
+<p>
+  <strong>Third grading:</strong>
+  <%= @subject.third_grading %>
+</p>
+
+<p>
+  <strong>Fourth grading:</strong>
+  <%= @subject.fourth_grading %>
+</p>
+
+<p>
+  <strong>Final grade:</strong>
+  <%= @subject.Final_grade %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @subject.student_id %>
+</p>
+
+<%= link_to 'Edit', edit_subject_path(@subject) %> |
+<%= link_to 'Back', subjects_path %>

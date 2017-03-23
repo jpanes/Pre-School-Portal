@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subject_title: MyString
+  first_grading: 1
+  second_grading: MyString
+  integer: MyString
+  third_grading: 1
+  fourth_grading: 1
+  final_grade: 1
+  student_id: 1
+  remarks: MyString
+
+two:
+  subject_title: MyString
+  first_grading: 1
+  second_grading: MyString
+  integer: MyString
+  third_grading: 1
+  fourth_grading: 1
+  final_grade: 1
+  student_id: 1
+  remarks: MyString

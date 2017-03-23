@@ -11,16 +11,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170305081424) do
+ActiveRecord::Schema.define(version: 20170321181210) do
 
-  create_table "parents", force: :cascade do |t|
+  create_table "students", force: :cascade do |t|
     t.string   "name"
+    t.string   "gender"
+    t.date     "birthday"
+    t.integer  "age"
     t.string   "address"
-    t.string   "email"
-    t.string   "phone_number"
-    t.string   "child"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "level"
+    t.string   "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string   "subject_title"
+    t.integer  "first_grading"
+    t.string   "second_grading"
+    t.string   "integer"
+    t.integer  "third_grading"
+    t.integer  "fourth_grading"
+    t.integer  "final_grade"
+    t.integer  "student_id"
+    t.string   "remarks"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

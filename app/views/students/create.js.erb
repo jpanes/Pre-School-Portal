@@ -1,0 +1,12 @@
+$("#mynewstudent").modal('hide');
+$(".student_name").val('');
+$(".student_gender").val('');
+$(".student_birthday").val('');
+$(".student_age").val('');
+$(".student_address").val('');
+$(".student_level").val('');
+$(".student_picture").val('');
+
+$("#container_students").prepend('<%= j render @student%>');
+$("#student_<%= @student.id %>").hide().fadeIn(1000);
+
