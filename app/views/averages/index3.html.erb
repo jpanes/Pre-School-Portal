@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Averages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Filipino</th>
+      <th>English</th>
+      <th>Science</th>
+      <th>Math</th>
+      <th>Msep</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @averages.each do |average| %>
+      <tr>
+        <td><%= average.name %></td>
+        <td><%= average.filipino %></td>
+        <td><%= average.english %></td>
+        <td><%= average.science %></td>
+        <td><%= average.math %></td>
+        <td><%= average.msep %></td>
+        <td><%= link_to 'Show', average %></td>
+        <td><%= link_to 'Edit', edit_average_path(average) %></td>
+        <td><%= link_to 'Destroy', average, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+<a href="/index2"> 2nd Grading </a>
+<a href="/index1"> 1st Grading </a>
+<a href="/index4"> 4th Grading </a>
+
+<a href="http://localhost:3000/averages"> Back </a>
