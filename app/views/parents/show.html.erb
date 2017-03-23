@@ -26,11 +26,11 @@
 </p>
 
 <p>
-  <strong>Child:</strong>
-  <%= @parent.child %>
+  <strong>Child name:</strong>
+  <%= @parent.child_name %>
 </p>
 
-<%= render :partial=>"new_parent" %>
+<%= render :partial=>"new_student", :locals=>{:student=>Student.new} %>
 
 <%= link_to 'Edit', edit_parent_path(@parent) %> |
 <%= link_to 'Back', parents_path %>

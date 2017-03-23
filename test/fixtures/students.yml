@@ -1,19 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  student_id: MyString
+  student_id: 1
   name: MyString
   gender: MyString
-  birthday: 2017-03-09
-  age: 1
-  address: MyString
-  level: 1
+  birthday: 2017-03-10
+  level: MyString
 
 two:
-  student_id: MyString
+  student_id: 1
   name: MyString
   gender: MyString
-  birthday: 2017-03-09
-  age: 1
-  address: MyString
-  level: 1
+  birthday: 2017-03-10
+  level: MyString

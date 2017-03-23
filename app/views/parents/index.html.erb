@@ -10,7 +10,7 @@
       <th>Contact number</th>
       <th>Email</th>
       <th>Address</th>
-      <th>Child</th>
+      <th>Child name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,7 +23,7 @@
         <td><%= parent.contact_number %></td>
         <td><%= parent.email %></td>
         <td><%= parent.address %></td>
-        <td><%= parent.child %></td>
+        <td><%= parent.child_name %></td>
         <td><%= link_to 'Show', parent %></td>
         <td><%= link_to 'Edit', edit_parent_path(parent) %></td>
         <td><%= link_to 'Destroy', parent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
